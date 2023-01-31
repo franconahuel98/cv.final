@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.date {
+    color:#313131;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.semi-bold {
+    color:#040420;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.box {
+  
+  height: auto;
+  display: flex;
+
+}
+
+.box .box_left {
+  width: 400px;
+  background: #c3c9fc;
+}
+
+.box .box_left.change {  /* esta es la otra opcion de color para la box izquierda */
+    width: 400px;
+    background: #8f8f8f;
+  }
+
+.box .box_left .box_profile {
+  width: 250px;
+  height: 250px;
+  margin-left: 25px;
+  margin-top: 25px;
+  border: 50px
+}
+
+.box .box_left .box_profile img {
+  width: 250px;
+  height: 250px;
+  margin-right: 100px;
+}
+
+.box .box_left .box_content {
+  padding: 0 25px;
+}
+
+
+.box .title {
+  margin-bottom: 20px;
+}
+
+.box .box_left .bold {
+  color: rgb(7, 10, 41);
+}
+
+.box .box_left .regular {
+  color: #0a0824;
+}
+
+.box .box_item {
+  padding: 25px 0;
+  border-bottom: 2px solid #000000;
+}
+
+.box .box_left .box_item:last-child,
+.box .box_right .box_item:last-child {
+  border-bottom: 0px;
+}
+
+.box .box_left ul li {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.box .box_left ul li:last-child {
+  margin-bottom: 0;
+}
+
+.box .box_left ul li .icon {
+  width: 35px;
+  height: 35px;
+  background: rgb(133, 189, 206);
+  color: #060c33;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 16px;
+  position: relative;
+}
+
+.box .icon i,
+.box .box_right .box_hobby ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box .box_left ul li .data {
+  color: #0b0a1f;
+}
+
+.box .box_left .box_skills ul li {
+  display: flex;
+  margin-bottom: 10px;
+  color: #121222;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box .box_left .box_skills ul li .skill_name {
+  width: 25%;
+}
+
+.box .box_left .box_skills ul li .skill_progress {
+  width: 60%;
+  margin: 0 5px;
+  height: 5px;
+  background: #009fd9;
+  position: relative;
+}
+
+.box .box_left .box_skills ul li .skill_per {
+  width: 15%;
+}
+
+.box .box_left .box_skills ul li .skill_progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;
+}
+
+.box .box_left .box_social .semi-bold {
+  color: rgb(13, 0, 196);
+  margin-bottom: 3px;
+}
+
+.box .box_right {
+ 
+  background: rgb(246, 251, 255);
+  padding: 25px;
+}
+
+.box .box_right.change {  /* esta es la otra opcion de color para la box derecha */
+ 
+    background: rgb(167, 167, 167);
+    padding: 25px;
+  }
+
+.box .box_right .bold {
+  color: #1b294e;
+}
+
+.box .box_right .box_work ul,
+.box .box_right .box_education ul {
+  padding-left: 40px;
+  overflow: hidden;
+}
+
+.box .box_right ul li {
+  position: relative;
+}
+
+.box .box_right ul li .date {
+  font-size: 16px;
+  color:#050a0c;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.box .box_right ul li .info {
+  margin-bottom: 20px;
+}
+
+.box .box_right ul li:last-child .info {
+  margin-bottom: 0;
+}
+
+.box .box_right .box_work ul li:before,
+.box .box_right .box_education ul li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -25px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+}
+
+.box .box_right .box_work ul li:after,
+.box .box_right .box_education ul li:after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: -21px;
+  width: 2px;
+  height: 115px;
+  background: #050a0c;
+}
+
+.box .box_right .box_hobby ul {
+    top:100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .box .box_right .box_hobby ul li {
+    top:50px;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #000000;
+    border-radius: 50%;
+    position: relative;
+    color: #000000;
+  }
+  
+  .box .box_right .box_hobby ul li i {
+    font-size: 30px;
+  }
+  
+  .box .box_right .box_hobby ul li:last-child:before {
+    display: none;
+  }
+
+  @media screen and (max-width: 800px){
+	.box .box_left .box_content{
+		display: none;
+	}
+	.box .box_left .box_content{
+		display: block;
+	}
+	.box{
+		width: 95%;
+		margin: 10px auto;
+		flex-direction: column;
+	}
+	.box .box_left,
+	.box .box_right{
+		width: 100%;
+	}
+
+  .box .box_left.change,
+	.box .box_right.change{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 424px){
+	.box .box_right{
+		padding: 20px 30px;
+	}
+
+  .box .box_right.change{
+		padding: 20px 30px;
+	}
+
+	.box .box_right .box_data{
+		flex-direction: column;
+	}
+	.box .box_right .box_data .year{
+		padding: 0;
+		margin-bottom: 5px;
+		width: 100%;
+		color: #0175b2;
+	}
+	.box .box_right .box_data .year:before,
+	.box .box_right .box_data .year:after{
+		display: none;
+	}
+	.box .box_right .box_data .content{
+		width: 100%;
+		padding: 0;
+	}
+	.box .box_right .box_interests .hobby .int_icon{
+		font-size: 24px;
+	}
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+ div.container h3 {
+    color: rgb(255, 0, 234);
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* esto es el diseño del boton de cambio de color  */
+
+.color-select {  
+    width: 250;
+    height: 10px;
+    background-color:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.color-select div {
+    background: rgb(6, 147, 207);
+    width: 60px;
+    height: 60px;
+    border-radius: 80%;
+    margin-right:-150px;
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+ 
+   }
+
